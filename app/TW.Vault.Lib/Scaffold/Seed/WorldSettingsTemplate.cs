@@ -19,6 +19,7 @@ namespace TW.Vault.Lib.Scaffold.Seed
             new WorldSettingsTemplate { TldHostname = "tribals.it", DefaultTranslationId = 52, TimeZoneId = "Europe/Berlin" },
             new WorldSettingsTemplate { TldHostname = "tribalwars.nl", DefaultTranslationId = 33, TimeZoneId = "Europe/Amsterdam" },
             new WorldSettingsTemplate { TldHostname = "tribalwars.com.pt", DefaultTranslationId = 32, TimeZoneId = "Europe/London" },
+            new WorldSettingsTemplate { TldHostname = "klanhaboru.hu", DefaultTranslationId = 2, TimeZoneId = "Europe/Budapest" },
         };
     }
 }
