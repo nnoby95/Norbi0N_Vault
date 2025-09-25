@@ -17,7 +17,7 @@
             return;
         }
 
-        var commandState = $td.find('img:first-of-type').prop('src').match(/(\w+)\.png/)[1];
+        var commandState = $td.find('img:first-of-type').prop('src').match(/(\w+)\.(png|webp)/)[1];
 
         let commandType = commandState.contains("attack") ? "attack" : "support";
         let isReturning = commandState.contains("return") || commandState.contains("back");
