@@ -1,0 +1,48 @@
+sudo -u postgres psql -d vault << 'EOF'
+INSERT INTO feature.translation (translation_id, key, value) VALUES
+(2, 201, 'Script igénylése'),
+(2, 202, '{playerName} Vault-kulcsa eltávolításra kerül'),
+(2, 203, '{playerName} többé nem rendelkezik adminisztrátori jogosultságokkal.'),
+(2, 204, '{playerName} adminisztrátori jogosultságokat kap, és képes lesz:
+                - Hozzáférni az összes elérhető csapatinformációhoz
+                - Új felhasználókat hozzáadni
+                - Felhasználók adminisztrátori jogosultságait megadni és visszavonni'),
+(2, 205, 'Vault script: {playerName} számára'),
+(2, 206, '1/4 Nukes'),
+(2, 207, '1/2 Nukes'),
+(2, 208, '3/4 Nukes'),
+(2, 209, 'Összes full nuke'),
+(2, 210, 'Összes nemes'),
+(2, 211, 'Összes lehetséges nemes'),
+(2, 212, 'Összes védő'),
+(2, 213, 'Összes bejövő'),
+(2, 214, 'Összes támadó'),
+(2, 215, 'Feltöltés szükséges?'),
+(2, 216, 'Igen'),
+(2, 217, 'Játékos'),
+(2, 218, 'Full Nukes'),
+(2, 219, 'Nukes úton'),
+(2, 220, 'Lehetséges nemesek'),
+(2, 221, 'Birtokolt védő falvak'),
+(2, 222, 'Védők otthon'),
+(2, 223, 'Backline védő falvak a faluban'),
+(2, 224, 'Védők úton'),
+(2, 225, 'Védők más saját falvakban'),
+(2, 226, 'Védők más játékosnál'),
+(2, 227, 'Becsült támadó falvak'),
+(2, 228, 'Becsült védő falvak'),
+(2, 229, '# Bejövők'),
+(2, 230, '# Támadások'),
+(2, 231, 'Védők {tribeName} számára'),
+(2, 234, 'Értesítések'),
+(2, 241, 'Server idő'),
+(2, 243, 'Üzenet'),
+(2, 244, 'Hozzáadás'),
+(2, 264, 'Nem kötelező'),
+(2, 268, 'Mentés'),
+(2, 275, 'Statisztika'),
+(2, 282, 'Saját'),
+(2, 283, 'Hiba történt a statisztikák betöltése közben'),
+(2, 284, 'Utolsó 7 nap')
+ON CONFLICT (translation_id, key) DO UPDATE SET value = EXCLUDED.value;
+EOF
